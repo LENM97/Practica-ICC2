@@ -1,0 +1,53 @@
+import java.util.Scanner;
+/**
+ * Programa para calcular el RFC de una persona.
+ * Objetivo Utilizar algunos metodos de la clase String
+ * @author  Nava Mata Luis Eduardo
+ * @version 5.16
+ */
+public class RFC {
+  static public void main(String [] args) {
+    String nombre;
+    String apellidoMaterno;
+    String apellidoPaterno;
+    String fechaNac;
+    String rfc="";
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println("Para sacar tu RFC agrega los datos que se te piden"); //instrucciones de uso
+
+    // Solicita nombre
+    System.out.println("Ingresa tu nombre ");
+    nombre = in.nextLine();
+    
+    // Solicita el apellido paterno
+    System.out.println("Ingresa tu apellido paterno");
+    apellidoPaterno = in.nextLine();
+    
+    // Solicita el apellido materno
+    System.out.println("Ingresa tu apellido materno");
+    apellidoMaterno = in.nextLine();
+    
+    // Extrae las dos letras del apellido paterno y lo agrega al RFC
+    rfc = apellidoPaterno.trim().substring(0, 2);
+    
+    // Extrae la inicial del apellildo materno y lo agrega al RFC
+    rfc = rfc.concat( apellidoMaterno.trim().substring(0, 1));
+    
+    // Extrae la inicial del nombre y lo agrega a RFC
+    rfc = rfc.concat(nombre.trim().substring(0, 1));
+    
+    // Solicita la fecha de nacimiento.
+    
+    System.out.println("Ingresa fecha de nacimiento aÃ±o, mes y dÃ­a (Ejemplo 970625)");
+    // Lee la fecha de nacimiento
+    fechaNac = in.nextLine();
+    
+    // Extrae la informacion requerida
+    rfc = rfc.concat(fechaNac.trim());
+        
+
+    System.out.println("El RFC de " + nombre.toUpperCase() + " es " +  rfc.toUpperCase()); //Pasar a mayusculas el RFC y mostrarlo
+  
+  }
+}
