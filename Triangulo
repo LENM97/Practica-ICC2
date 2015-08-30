@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class Triangulo{
+    //atributos
+    double altura; //define altura
+    double lado; //define lado
+    String color;
+
+    //Constructor que inicializa las variables instanciadas
+    public Triangulo(double lado, double altura, String color){
+	this.lado=lado; //inicializa el lado
+	this.color=color; //inicializa el color
+	this.altura=altura; //inicializa la altura
+    }
+
+    //Metodo que obtiene el color del Triangulo
+    public String getColor(){
+	return color;
+    }
+
+    //Metodo que le asigna un color al triangulo
+    public void setColor(String color){
+	this.color=color;
+    }
+
+    //Metodo que obtiene el lado del triangulo
+    public double getLado(){
+	return lado;
+    }
+
+    //Metodo que le asigna un lado al triangulo
+    public void setLado(double lado){
+	this.lado=lado;
+    }
+
+    //Metodo que obtine la altura de un triangulo
+    public double getAltura(){
+	return altura;
+    }
+
+    //Metodo que asigna la altura de un triangulo
+    public void setAltura(double altura){
+	this.altura=altura;
+    }
+    //Metodo que obtiene el area del triangulo
+	public double getArea(){
+	    double area = lado* altura/2;
+	    return area;
+	}
+
+    //metodo que obtine el perimetro de un triangulo
+    public double getPerimetro(){
+	double perimetro= lado + lado + lado;
+	return perimetro;
+    }
+    //Metodo que nos permite imprimir el objeto triangulo
+    public String toString(){
+	return "------\n Triangulo\n Color= " + color + "\n Lado=" + getLado() + "\n" + "\n Altura=" + getAltura() + "\n" + "\n Perimetro=" + getPerimetro() + "\n" +  "\n Area=" + getArea() + "\n";
+    }
+
+    public static void main(String args[]){
+	//Creacion de triangulo con 5 de altura y 5 de lado con color cualquiera
+	Scanner in = new Scanner(System.in);
+	System.out.println("Dame el color del triangulo");
+	String color = in.nextLine();
+
+	Triangulo triangulo1 = new Triangulo (5,5, color);
+       
+	System.out.println(triangulo1); //imprime triangulo
+    }
+}
