@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class Cuadrado{
+    //atributos
+
+    double lado; //define lado
+    String color;
+
+    //Constructor que inicializa las variables instanciadas
+    public Cuadrado(double lado, String color){
+	this.lado=lado; //inicializa el lado
+	this.color=color; //inicializa el color
+
+    }
+
+    //Metodo que obtiene el color del Cuadrado
+    public String getColor(){
+	return color;
+    }
+
+    //Metodo que le asigna un color al Cuadrado
+    public void setColor(String color){
+	this.color=color;
+    }
+
+    //Metodo que obtiene el lado de un Cuadrado
+    public double getLadoCuadrado(){
+	return lado;
+    }
+
+    //Metod que le asigna un lado al Cuadrado
+    public void setLadoCuadrado(double lado){
+	this.lado=lado;
+    }
+
+    //Metodo que obtiene el area del Cuadrado
+    public double getAreaCuadrado(){
+	double area = (lado* lado);
+	return area;
+    }
+
+    //metodo que obtine el perimetro de un Cuadrado
+    public double getPerimetroCuadrado(){
+	double perimetro= lado*4;
+	return perimetro;
+    }
+    
+    //Metodo que nos permite imprimir el objeto triangulo
+    public String toString(){
+	return "------\n Cuadrado\n Color= " + color + "\n Lado=" + getLadoCuadrado()  + "\n Perimetro=" + getPerimetroCuadrado() + "\n" +  "\n Area=" + getAreaCuadrado() + "\n";
+    }
+
+    public static void main(String args[]){
+	//Creamos un objeto Cuadrado con lado 7
+	Scanner in = new Scanner(System.in);
+	System.out.println("Dame el color del Cuadrado");
+	String color = in.nextLine();
+
+	Cuadrado cuadrado1 = new Cuadrado(7,color);
+	//Imprimimos el cuadrado
+	System.out.println(cuadrado1);
+    }
+}
