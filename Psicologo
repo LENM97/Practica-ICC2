@@ -1,0 +1,20 @@
+import java.util.Scanner;
+/**
+ * Programa para tener sesiones con un psicologo
+ * @author 
+ * @version
+ */
+public class Psicologo {
+    public static void main(String [] pps) {
+	Scanner in = new Scanner(System.in);
+	System.out.println("Bienvenido, ¿Cual es tu nombre?"); //Dar bienvenida al paciente y solicitar su nombre
+	String name = in.nextLine(); //Permite al usuario contar su problema
+	System.out.println("Buenas tardes " + name + " Â¿CuÃ¡l es tu problema?"); //Decir buenas tardes y preguntar por el problema
+	String problem = in.nextLine(); //Ordena escribir en la linea siguiente el problema
+	System.out.println("¿Por que crees que tu problema sea: " +problem + "?"); //Manda a llamar a lo que la persona escribio anteriormente
+	String problema2 = in.nextLine(); //Permite al usuario contar la razon del problema
+	System.out.println("Interesante, hablaremos de ello la siguiente sesion.");
+    //Decir ¿Por que crees que tu problema sea:  problema?
+    //Leer respuesta y decir Interesante...	
+    }
+}
